@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+        <title>Name</title>
+    </head>
+    <body>
+        <div class = 'navigation-bar'>
+            <li>
+                <span class = 'nav-item' id = 'me'></span>
+                <span class = 'nav-item' id = 'blog-span'>About</span>
+                <span class = 'nav-item' id = 'contact-span'><a href = '../contact.html'>Contact me</a></span>
+            </li>
+        </div>
+        <div id = 'content'>
+            <canvas id ='vector-grid' height="800" width = "800">
+                this is a canvas
+            </canvas>
+            <input id="theta-slider" type="range" min = "0" max = "6.28318530718" value = "0" step = "0.0001">
+                choose theta    
+        </div>
+        <script src="complex.js"></script>
+        <script>
+            fill_cartesian()
+            //draw_complex('vector-grid', [0, 6]);
+            //draw_complex('vector-grid', [6, 0]);
+            var rangeInput = document.getElementById("theta-slider");
+            rangeInput.addEventListener('input', function() {
+                redraw_canvas('vector-grid', 'cartesian_plane');
+                cart = get_cartesian([2, this.value], [FACTOR/2, FACTOR/2])
+                draw_complex('vector-grid', cart, [FACTOR/2, FACTOR/2], thickness = 4);
+            });
+
+                    </script>   
+    </body>
+
+</html>

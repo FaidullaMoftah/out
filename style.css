@@ -1,0 +1,30 @@
+html{
+    background-color: rgb(206, 206, 206);
+    padding:2%;
+}
+.navigation-bar {
+    background-color: rgb(41, 41, 42);
+    overflow: hidden;
+    padding:3%;
+}
+.nav-item{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+#me{
+    color: aliceblue;
+    font-size: 2em;
+    padding-right: 50%;
+}
+#blog-span, #contact-span{
+    color: aliceblue;
+    font-size: 2em;
+}
+#blog-span{
+    padding-right: 10%;
+}
+#vector-grid{
+    border: 1px solid black;
+    color:black;
+    background-color: white;
+}
